@@ -1,0 +1,13 @@
+creamos maquina virtual
+pip install virtualenv[ESTO SE HACE DENTRO DE LA CARPETA SIBS, es decir hacemos un "cd SIBS"]
+virtualenv venv
+cd \venv\scripts\activate.bat
+
+pip install flask flask-sqlalchemy flask-marshmallow marshmallow pymysql[ESTO SE HACE DENTRO DE LA CARPETA ENV, es decir hacemos un "cd SIBS"]
+
+/*sacamos las librerias */
+pip freeze > requirements.txt
+/*instalamos todas las librerias*/
+pip .install --r requirements
+pip install -r requirements.txt[ESTO SE HACE DENTRO DE LA CARPETA SIBS, es decir hacemos un "cd SIBS"]
+investigar sobre docker y crear un aplicativo

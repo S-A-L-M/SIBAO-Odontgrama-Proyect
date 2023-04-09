@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>
+        <!--se coloca el titulo de la pagina en la cual estamos-->
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" href="{{url_for('static', filename='assets/icons/book.ico')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/sweet-alert.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/material-design-iconic-font.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/jquery.mCustomScrollbar.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+   
+</head>
+<body>
+ 
+  {% block body %}
+  {% endblock %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="{{url_for("static", filename="js/jquery-1.11.2.min.js")}}"><\/script>')</script>
+  <script src="{{url_for('static', filename='js/modernizr.js')}}"></script>
+  <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/BIJS/listcategory.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  <script src="{{url_for('static', filename='js/sweet-alert.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/BIJS/advancesettings.js')}}"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
