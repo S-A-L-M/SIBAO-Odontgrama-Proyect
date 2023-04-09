@@ -3,12 +3,6 @@ from flask import Blueprint, Flask,  redirect, request, jsonify, json, session, 
 
 routes_mainweb = Blueprint("routes_mainweb", __name__)
 
-
-@routes_mainweb.route('/indexhome', methods=['GET'] )
-def indexhome():
-    
-    return render_template('/main/index.html')
-
 #---------------------ESTO ES EL LOGIN YA DENTRO DE TEMPLATE ODONTOGRAMA-------------------
 @routes_mainweb.route('/indexlogin', methods=['GET'] )
 def indexlogin():
