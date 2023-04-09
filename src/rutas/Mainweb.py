@@ -8,3 +8,10 @@ routes_mainweb = Blueprint("routes_mainweb", __name__)
 def indexhome():
     
     return render_template('/main/index.html')
+
+#---------------------ESTO ES EL LOGIN YA DENTRO DE TEMPLATE ODONTOGRAMA-------------------
+@routes_mainweb.route('/indexlogin', methods=['GET'] )
+def indexlogin():
+    
+    return render_template('/main/index.html')
+
