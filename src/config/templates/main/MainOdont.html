@@ -154,14 +154,12 @@
               sapien, cursus sed
               nisl tristique, commodo gravida lectus non.
             </p>
-
-            <form action="" class="hero-form">
-              <input type="email" name="email_address" aria-label="email" placeholder="Your Email Address..." required
+            <form id="email-form" action="" class="hero-form">
+              <input type="email" id="email-input" name="email_address" aria-label="email" placeholder="Your Email Address..." required
                 class="email-field">
 
-              <button type="submit" class="btn">Get Call Back</button>
+              <button type="submit" class="btn" onclick="sendEmail()">Get Call Back</button>
             </form>
-
           </div>
 
           <figure class="hero-banner">
@@ -926,7 +924,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="https://apis.google.com/js/api.js"></script>
 </body>
 
 </html>
