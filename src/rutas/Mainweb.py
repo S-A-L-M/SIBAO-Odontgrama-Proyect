@@ -8,4 +8,3 @@ routes_mainweb = Blueprint("routes_mainweb", __name__)
 def indexlogin():
     
     return render_template('/main/index.html')
-
