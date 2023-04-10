@@ -8,6 +8,7 @@ from rutas.Mainweb import routes_mainweb
 #rutas
 from rutas.Mainweb import routes_mainweb
 from rutas.login import routes_login
+from rutas.odontograma import routes_odontograma
 
 #ubicacion del api
 app.register_blueprint(routes_roles, url_prefix="/api")
@@ -15,6 +16,7 @@ app.register_blueprint(routes_roles, url_prefix="/api")
 
 #ubicacion rutas
 app.register_blueprint(routes_login, url_prefix="/fronted")
+app.register_blueprint(routes_odontograma, url_prefix="/fronted")
 
 
 @app.route("/")
