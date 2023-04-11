@@ -1,7 +1,7 @@
 {% extends "main/layout.html" %}
 {% block body %}
 	<div class="full-box login-container cover">
-		<form action="home.html" method="" autocomplete="off" class="logInForm">
+		<form action="fronted/indexhome" method="" autocomplete="off" class="logInForm">
 			<p class="text-center text-muted"><i class="zmdi zmdi-account-circle zmdi-hc-5x"></i></p>
 			<p class="text-center text-muted text-uppercase">Inicia sesión con tu cuenta</p>
 			<div class="form-group label-floating">
@@ -14,6 +14,17 @@
 			  <input class="form-control" id="UserPass" type="text">
 			  <p class="help-block">Escribe tú contraseña</p>
 			</div>
+			<br>
+			<div class="group-material text-center">
+				<select class="material-control-login" style="background-color: #F8F8F8; color: #333; border: 1px solid #CCC;">
+				  <option value="" disabled="" selected="">Tipo de usuario</option>
+				  <option value="Student">Estudiante</option>
+				  <option value="Teacher">Docente</option>
+				  <option value="Personal">Personal administrativo</option>
+				  <option value="Admin">Administrador</option>
+				</select>
+			  </div>
+			
 			<div class="form-group text-center">
 				<input type="submit" value="Iniciar sesión" class="btn btn-info" style="color: #FFF;">
 			</div>
