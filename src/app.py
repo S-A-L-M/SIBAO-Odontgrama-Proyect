@@ -6,7 +6,6 @@ from api.roles import routes_roles
 
 
 #rutas
-from rutas.Mainweb import routes_mainweb
 from rutas.odontograma import routes_odontograma
 from rutas.LoginandRegister import routes_loginandregister
 
@@ -17,7 +16,6 @@ app.register_blueprint(routes_roles, url_prefix="/api")
 #ubicacion rutas
 app.register_blueprint(routes_odontograma, url_prefix="/fronted")
 app.register_blueprint(routes_loginandregister, url_prefix="/fronted")
-app.register_blueprint(routes_mainweb, url_prefix="/fronted")
 @app.route("/")
 def index():
     titulo= "Pagina Princiapl"
