@@ -24,7 +24,7 @@ def index():
 
 @app.route("/algo")
 def otr():
-    return "hola mondongo"
+    return "hola mondongo del master-v2"
 
 
 # Datos de la tabla de Editoriales
