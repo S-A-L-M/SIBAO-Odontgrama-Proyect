@@ -13,6 +13,7 @@ from rutas.Companylist import routes_companylist
 from rutas.Category import routes_category
 from rutas.Categorylist import routes_categorylist
 from rutas.Provider import routes_provider
+from rutas.Providerlist import routes_providerlist
 
 #ubicacion del api
 app.register_blueprint(routes_roles, url_prefix="/api")
@@ -26,12 +27,14 @@ app.register_blueprint(routes_companylist, url_prefix="/fronted")
 app.register_blueprint(routes_category, url_prefix="/fronted")
 app.register_blueprint(routes_categorylist, url_prefix="/fronted")
 app.register_blueprint(routes_provider, url_prefix="/fronted")
+app.register_blueprint(routes_providerlist, url_prefix="/fronted")
+
 
 
 
 @app.route("/")
 def index():
-    titulo= "Pagina Princiapl"
+    titulo= "Pagina Principal"
     return render_template('main/indexLog.html', titles=titulo)
 
 
