@@ -5,12 +5,13 @@ from config.db import db, app, ma
 from api.roles import routes_roles
 
 
-#rutas
+#rutas | ¡¡¡RECUERDA PRIMERO IMPORTAR LA RUTA Y DESPUÉS AGREGARLO EN LA UBICACION DE RUTAS!!!! |
 from rutas.odontograma import routes_odontograma
 from rutas.home import routes_home
 from rutas.Company import routes_company
 from rutas.Companylist import routes_companylist
 from rutas.Category import routes_category
+from rutas.Categorylist import routes_categorylist
 
 #ubicacion del api
 app.register_blueprint(routes_roles, url_prefix="/api")
@@ -22,6 +23,7 @@ app.register_blueprint(routes_home, url_prefix="/fronted")
 app.register_blueprint(routes_company, url_prefix="/fronted")
 app.register_blueprint(routes_companylist, url_prefix="/fronted")
 app.register_blueprint(routes_category, url_prefix="/fronted")
+app.register_blueprint(routes_categorylist, url_prefix="/fronted")
 
 
 
