@@ -9,6 +9,7 @@ from api.roles import routes_roles
 from rutas.odontograma import routes_odontograma
 from rutas.home import routes_home
 from rutas.Company import routes_company
+from rutas.Companylist import routes_companylist
 
 #ubicacion del api
 app.register_blueprint(routes_roles, url_prefix="/api")
@@ -18,6 +19,7 @@ app.register_blueprint(routes_roles, url_prefix="/api")
 app.register_blueprint(routes_odontograma, url_prefix="/fronted")
 app.register_blueprint(routes_home, url_prefix="/fronted")
 app.register_blueprint(routes_company, url_prefix="/fronted")
+app.register_blueprint(routes_companylist, url_prefix="/fronted")
 
 
 
