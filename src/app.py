@@ -25,7 +25,8 @@ app.register_blueprint(routes_company, url_prefix="/fronted")
 app.register_blueprint(routes_companylist, url_prefix="/fronted")
 app.register_blueprint(routes_category, url_prefix="/fronted")
 app.register_blueprint(routes_categorylist, url_prefix="/fronted")
-app.register_blueprint(routes_provider, url_prefix="/frontend")
+app.register_blueprint(routes_provider, url_prefix="/fronted")
+
 
 
 @app.route("/")
