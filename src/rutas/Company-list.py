@@ -5,6 +5,6 @@ routes_companylist = Blueprint("routes_companylist", __name__)
 
 
 @routes_companylist.route('/indexcompanylist', methods=['GET'] )
-def indexcompanylist():
+def indexcompany():
     
     return render_template('/main/Company-list.html')
