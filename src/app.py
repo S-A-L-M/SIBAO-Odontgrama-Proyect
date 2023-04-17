@@ -14,6 +14,8 @@ from rutas.Category import routes_category
 from rutas.Categorylist import routes_categorylist
 from rutas.Provider import routes_provider
 from rutas.Providerlist import routes_providerlist
+from rutas.Book import routes_book
+from rutas.Admin import routes_admin
 
 #ubicacion del api
 app.register_blueprint(routes_roles, url_prefix="/api")
@@ -28,6 +30,8 @@ app.register_blueprint(routes_category, url_prefix="/fronted")
 app.register_blueprint(routes_categorylist, url_prefix="/fronted")
 app.register_blueprint(routes_provider, url_prefix="/fronted")
 app.register_blueprint(routes_providerlist, url_prefix="/fronted")
+app.register_blueprint(routes_book, url_prefix="/fronted")
+app.register_blueprint(routes_admin, url_prefix="/fronted")
 
 
 
