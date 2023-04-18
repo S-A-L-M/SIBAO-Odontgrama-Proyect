@@ -116,7 +116,7 @@ body, html{
 .dashboard-sideBar{
 	left: 0;
 	z-index: 2;
-	background-image: url('../assets/img/sideBar.png');
+	background-image: url('../assets/images/about-banner.png');
 	border-right: 1px solid rgba(255, 255, 255, .7);
 	overflow: hidden;
 }
