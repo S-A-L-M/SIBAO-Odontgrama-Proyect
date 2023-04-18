@@ -4,7 +4,7 @@
     <div ng-controller="dientes">
     <center>
         <div>
-            <svg height="50" class="{{tipoDiente}}" width="50"  data-ng-repeat="i in adultoArriva" id="{{id}}">
+            <svg height="50" class="{{tipoDiente}}" width="50"  data-ng-repeat="tipoDiente in adultoArriva" id="{{id}}">
                   <polygon points="10,15 15,10 50,45 45,50" estado="4" value="6" class="ausente" />
                   <polygon points="45,10 50,15 15,50 10,45" estado="4" value="7" class="ausente" />
                   <circle cx="30" cy="30" r="16" estado="8" value="8" class="corona"/>

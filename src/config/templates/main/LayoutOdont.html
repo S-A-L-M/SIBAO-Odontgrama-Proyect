@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>
+        Dentelo - We Are Best Dental Service
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!----AQUI VA LOS STYLES CSS-->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/SIBAO/estilosOdontograma')}}">
+   
+   
+</head>
+<body>
+ 
+  {% block body %}
+  {% endblock %}
+  <!---AQUI VA LOS SCRIPT-->
+  <script src="{{url_for('static', filename='js/angular.js')}}"></script>
+	<script src="{{url_for('static', filename='js/app.js')}}"></script>
+	<script src="{{url_for('static', filename='js/controller.js')}}"></script>
+	<script src="{{url_for('static', filename='js/jquey-2.14.js')}}"></script>
+	<script src="{{url_for('static', filename='js/jquey-odontograma.js')}}"></script>
+  
+</body>
+</html>
