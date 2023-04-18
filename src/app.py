@@ -19,10 +19,8 @@ from rutas.Admin import routes_admin
 from rutas.Adminlist import routes_adminlist
 from rutas.Adminsearch import routes_adminsearch
 from rutas.Client import routes_client
-from rutas.Clientlist import routes_clientlist
 from rutas.Login import routes_login
 from rutas.Mainodontograma import routes_mainodontograma
-from rutas.Clientlist import routes_clientlist
 from rutas.Clientsearch import routes_clientsearch
 
 #ubicacion del api
@@ -45,7 +43,6 @@ app.register_blueprint(routes_adminsearch, url_prefix="/fronted")
 app.register_blueprint(routes_client, url_prefix="/fronted")
 app.register_blueprint(routes_login, url_prefix="/fronted")
 app.register_blueprint(routes_mainodontograma, url_prefix="/fronted")
-app.register_blueprint(routes_clientlist, url_prefix="/fronted")
 app.register_blueprint(routes_clientsearch, url_prefix="/fronted")
 
 
