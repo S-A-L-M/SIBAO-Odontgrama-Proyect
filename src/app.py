@@ -19,6 +19,7 @@ from rutas.Admin import routes_admin
 from rutas.Adminlist import routes_adminlist
 from rutas.Adminsearch import routes_adminsearch
 from rutas.Client import routes_client
+from rutas.Clientlist import routes_clientlist
 from rutas.Login import routes_login
 from rutas.Mainodontograma import routes_mainodontograma
 from rutas.Clientlist import routes_clientlist
