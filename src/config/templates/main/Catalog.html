@@ -16,17 +16,17 @@
             </figure>
             <ul class="full-box list-unstyled text-center">
                 <li>
-                    <a href="my-data.html" title="Mis datos">
+                    <a href="indexmydata" title="Mis datos">
                         <i class="zmdi zmdi-account-circle"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="my-account.html" title="Mi cuenta">
+                    <a href="indexmyaccount" title="Mi cuenta">
                         <i class="zmdi zmdi-settings"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#!" title="Salir del sistema" class="btn-exit-system">
+                    <a href="indexmainodontograma" title="Salir del sistema" class="btn-exit-system">
                         <i class="zmdi zmdi-power"></i>
                     </a>
                 </li>
@@ -52,6 +52,16 @@
                     </li>
                     <li>
                         <a href="indexbook"><i class="zmdi zmdi-book zmdi-hc-fw"></i>Tratamientos</a>
+                        <a href="indexcompany"><i class="zmdi zmdi-balance zmdi-hc-fw"></i>  Citas</a>
+                    </li>
+                    <li>
+                        <a href="indexcategory"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Dentistas</a>
+                    </li>
+                    <li>
+                        <a href="indexprovider"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Pacientes</a>
+                    </li>
+                    <li>
+                        <a href="indexbook"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Tratamientos</a>
                     </li>
                 </ul>
             </li>
@@ -128,7 +138,7 @@
                 <div class="list-group">
                     <div class="list-group-item">
                         <div class="row-picture">
-                            <img class="circle" src="assets/book/book-default.png" alt="icon">
+                            <img class="circle" img src="{{url_for('static', filename='/assets/book/book-default.png')}}" alt="icon">
                         </div>
                         <div class="row-content">
                             <h4 class="list-group-item-heading">1 - Título completo del libro</h4>
@@ -144,7 +154,7 @@
                     <div class="list-group-separator"></div>
                     <div class="list-group-item">
                         <div class="row-picture">
-                            <img src="assets/book/book-cover.jpg" alt="icon">
+                            <img src="{{url_for('static', filename='/assets/book/book-cover.jpg')}}" alt="icon">
                         </div>
                         <div class="row-content">
                             <h4 class="list-group-item-heading">2 - Título completo del libro</h4>
