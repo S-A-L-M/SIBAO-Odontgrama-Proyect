@@ -23,7 +23,7 @@ from rutas.Login import routes_login
 from rutas.Mainodontograma import routes_mainodontograma
 from rutas.Clientsearch import routes_clientsearch
 from rutas.Catalog import routes_catalogo
-from rutas.Clientlist import routes_clientlist
+from rutas.clientlist import routes_clientlist
 
 #ubicacion del api
 app.register_blueprint(routes_roles, url_prefix="/api")
@@ -48,6 +48,7 @@ app.register_blueprint(routes_mainodontograma, url_prefix="/fronted")
 app.register_blueprint(routes_clientsearch, url_prefix="/fronted")
 app.register_blueprint(routes_catalogo, url_prefix="/fronted")
 app.register_blueprint(routes_clientlist, url_prefix="/fronted")
+
 
 
 
