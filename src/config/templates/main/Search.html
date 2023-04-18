@@ -11,7 +11,7 @@
         <!-- SideBar User info -->
         <div class="full-box dashboard-sideBar-UserInfo">
             <figure class="full-box">
-                <img src="{{url_for('static', filename='/assets/avatars/StudetMaleAvatar.png')}}" alt="UserIcon">
+                <img src="{{url_for('static', filename='./assets/avatars/AdminMaleAvatar.png')}}" alt="UserIcon">
                 <figcaption class="text-center text-titles">User Name</figcaption>
             </figure>
             <ul class="full-box list-unstyled text-center">
@@ -41,17 +41,20 @@
             </li>
             <li>
                 <a href="#!" class="btn-sideBar-SubMenu">
-                    <i class="zmdi zmdi-case zmdi-hc"></i> Odontologia<i class="zmdi zmdi-caret-down pull-right"></i>
+                    <i class="zmdi zmdi-case zmdi-hc-fw"></i> Administración <i class="zmdi zmdi-caret-down pull-right"></i>
                 </a>
                 <ul class="list-unstyled full-box">
                     <li>
-                        <a href="indexcompany"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Citas</a>
+                        <a href="indexcompany"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Empresa</a>
                     </li>
                     <li>
-                        <a href="indexodontograma"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Odontograma</a>
+                        <a href="indexcategory"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
                     </li>
                     <li>
-                        <a href="indexbook"><i class="zmdi zmdi-book zmdi-hc-fw"></i>Tratamientos</a>
+                        <a href="indexprovider"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
+                    </li>
+                    <li>
+                        <a href="indexbook"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Nuevo libro</a>
                     </li>
                 </ul>
             </li>
@@ -61,22 +64,17 @@
                 </a>
                 <ul class="list-unstyled full-box">
                     <li>
-                        <a href="indexadmin"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Dentistas</a>
+                        <a href="indexadmin"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
                     </li>
                     <li>
-                        <a href="indexclient"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Pacientes</a>
+                        <a href="indexclient"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#!" class="btn-sideBar-SubMenu">
-                    <i class="zmdi zmdi-book-image zmdi-hc-fw"></i>Resumen<i class="zmdi zmdi-caret-down pull-right"></i>
+                <a href="indexcatalog">
+                    <i class="zmdi zmdi-book-image zmdi-hc-fw"></i> Catalogo
                 </a>
-                <ul class="list-unstyled full-box">
-                    <li>
-                        <a href="indexadmin"><i class="zmdi zmdi-account zmdi-hc-fw"></i>Historial</a>
-                    </li>
-
             </li>
         </ul>
     </div>
@@ -100,25 +98,43 @@
     <!-- Content page -->
     <div class="container-fluid">
         <div class="page-header">
-          <h1 class="text-titles"><i class="zmdi zmdi-book-image zmdi-hc-fw"></i> CATALOGO</h1>
+          <h1 class="text-titles"><i class="zmdi zmdi-search zmdi-hc-fw"></i> BUSCAR LIBRO</h1>
         </div>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
     </div>
-    <div class="container-fluid text-center">
-        <div class="btn-group">
-          <a href="javascript:void(0)" class="btn btn-default btn-raised">SELECCIONE UNA CATEORÍA</a>
-          <a href="javascript:void(0)" data-target="dropdown-menu" class="btn btn-default btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#!">Categoría 1</a></li>
-            <li><a href="#!">Categoría 2</a></li>
-            <li><a href="#!">Categoría 3</a></li>
-            <li><a href="#!">Categoría 4</a></li>
-            <li><a href="#!">Categoría 5</a></li>
-            <li><a href="#!">Categoría 6</a></li>
-            <li><a href="#!">Categoría 7</a></li>
-          </ul>
-        </div>
+
+    <div class="container-fluid">
+        <form class="well">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <div class="form-group label-floating">
+                        <span class="control-label">¿Qué libro estas buscando?</span>
+                        <input class="form-control" type="text" name="search_book_init" required="">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <p class="text-center">
+                        <button type="submit" class="btn btn-primary btn-raised btn-sm"><i class="zmdi zmdi-search"></i> &nbsp; Buscar</button>
+                    </p>
+                </div>
+            </div>
+        </form>
     </div>
+
+    <div class="container-fluid">
+        <form class="well">
+            <p class="lead text-center">Su última búsqueda  fue <strong>“Busqueda”</strong></p>
+            <div class="row">
+                <input class="form-control" type="hidden" name="search_book_destroy">
+                <div class="col-xs-12">
+                    <p class="text-center">
+                        <button type="submit" class="btn btn-danger btn-raised btn-sm"><i class="zmdi zmdi-delete"></i> &nbsp; Eliminar búsqueda</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <div class="container-fluid">
         <h2 class="text-titles text-center">Categoría seleccionada</h2>
         <div class="row">
@@ -126,7 +142,7 @@
                 <div class="list-group">
                     <div class="list-group-item">
                         <div class="row-picture">
-                            <img class="circle" img src="{{url_for('static', filename='/assets/book/book-default.png')}}" alt="icon">
+                            <img src="{{url_for('static', filename='/assets/book/book-default.png')}}" alt="icon">
                         </div>
                         <div class="row-content">
                             <h4 class="list-group-item-heading">1 - Título completo del libro</h4>
