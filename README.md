@@ -9,7 +9,7 @@
   <br />
   <br />
 
-  <h2 align="center">Dentelo - Dental website</h2>
+  <h2 align="center">Dentelo - Dental website[RAMA DESCONTINUADA] POR FAVOR, NO TOCAR NI HACER ALGUN TIPO DE MERGE A ESA RAMA O CUALQUIER COMANDO QUE INVOLUCRE ALGUN CAMBIO</h2>
 
   Dentelo is a fully responsive dental website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
