@@ -23,7 +23,7 @@ from rutas.Login import routes_login
 from rutas.Mainodontograma import routes_mainodontograma
 from rutas.Clientsearch import routes_clientsearch
 from rutas.Catalog import routes_catalogo
-from rutas.Clientlist import routes_clientlist
+from rutas.clientlist import routes_clientlist
 from rutas.Mydata import routes_mydata
 from rutas.Myaccount import routes_myaccount
 from rutas.Search import routes_search
