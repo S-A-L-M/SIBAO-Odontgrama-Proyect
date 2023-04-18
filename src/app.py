@@ -19,7 +19,10 @@ from rutas.Admin import routes_admin
 from rutas.Adminlist import routes_adminlist
 from rutas.Adminsearch import routes_adminsearch
 from rutas.Client import routes_client
-from rutas.clientlist import routes_clientlist
+from rutas.Clientlist import routes_clientlist
+from rutas.Login import routes_login
+from rutas.Mainodontograma import routes_mainodontograma
+from rutas.Clientlist import routes_clientlist
 
 #ubicacion del api
 app.register_blueprint(routes_roles, url_prefix="/api")
@@ -39,6 +42,8 @@ app.register_blueprint(routes_admin, url_prefix="/fronted")
 app.register_blueprint(routes_adminlist, url_prefix="/fronted")
 app.register_blueprint(routes_adminsearch, url_prefix="/fronted")
 app.register_blueprint(routes_client, url_prefix="/fronted")
+app.register_blueprint(routes_login, url_prefix="/fronted")
+app.register_blueprint(routes_mainodontograma, url_prefix="/fronted")
 app.register_blueprint(routes_clientlist, url_prefix="/fronted")
 
 
@@ -49,7 +54,7 @@ app.register_blueprint(routes_clientlist, url_prefix="/fronted")
 @app.route("/")
 def index():
     titulo= "Pagina Principal"
-    return render_template('main/indexLog.html', titles=titulo)
+    return render_template('main/MainOdontograma.html', titles=titulo)
 
 
 @app.route("/algo")
