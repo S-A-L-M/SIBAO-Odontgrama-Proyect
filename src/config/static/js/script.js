@@ -101,3 +101,94 @@ function sendEmail() {
     console.log(response);
   });
 }
+//APARTADO DE EL CONTAINER DE COOKIES
+const cookieContainer = document.querySelector(".cookie-container");
+const cookieButton = document.querySelector(".cookie-btn");
+const customizeButton = document.querySelector(".customize-btn");
+const moreInfoButton = document.querySelector(".more-info-btn");
+const cookieTitle = document.querySelector(".cookie-title");
+const cookieText = document.querySelector(".cookie-text");
+const customizeTitle = document.querySelector(".customize-title");
+const customizeText = document.querySelector(".customize-text");
+const acceptButton = document.querySelector(".accept-btn");
+const acceptAllButton = document.querySelector(".accept-all-btn");
+const cancelButton = document.querySelector(".cancel-btn");
+const cookieCheckboxes = document.querySelectorAll(".cookie-checkbox");
+
+cookieButton.addEventListener("click", () => {
+  cookieContainer.classList.add("active");
+});
+
+cancelButton.addEventListener("click", () => {
+  cookieContainer.classList.remove("active");
+});
+
+customizeButton.addEventListener("click", () => {
+  cookieTitle.classList.add("inactive");
+  cookieText.classList.add("inactive");
+  customizeTitle.classList.add("active");
+  customizeText.classList.add("active");
+  acceptButton.classList.add("customize");
+});
+
+acceptButton.addEventListener("click", () => {
+  if (acceptButton.classList.contains("customize")) {
+    let cookies = "";
+    for (let i = 0; i < cookieCheckboxes.length; i++) {
+      if (cookieCheckboxes[i].checked) {
+        cookies += cookieCheckboxes[i].name + ",";
+      }
+    }
+    setCookie("acceptedCookies", cookies.slice(0, -1), 30);
+    cookieContainer.classList.remove("active");
+  } else {
+    setCookie("acceptedCookies", "all", 30);
+    cookieContainer.classList.remove("active");
+  }
+});
+
+acceptAllButton.addEventListener("click", () => {
+  setCookie("acceptedCookies", "all", 30);
+  cookieContainer.classList.remove("active");
+});
+
+moreInfoButton.addEventListener("click", () => {
+  // Replace this with your own code for displaying more information about cookies
+  alert("More information about cookies");
+});
+
+function setCookie(name, value, expirationDays) {
+  const date = new Date();
+  date.setTime(date.getTime() + expirationDays * 24 * 60 * 60 * 1000);
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+  const cookieName = name + "=";
+  const cookies = document.cookie.split(";");
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i];
+    while (cookie.charAt(0) == " ") {
+      cookie = cookie.substring(1);
+    }
+    if (cookie.indexOf(cookieName) == 0) {
+      return cookie.substring(cookieName.length, cookie.length);
+    }
+  }
+  return "";
+}
+window.onload = () => {
+  const acceptedCookies = getCookie("acceptedCookies");
+  if (acceptedCookies === "all") {
+    cookieContainer.style.display = "none";
+  } else if (acceptedCookies !== "") {
+    const acceptedCookieList = acceptedCookies.split(",");
+    for (let i = 0; i < cookieCheckboxes.length; i++) {
+      if (acceptedCookieList.includes(cookieCheckboxes[i].name)) {
+        cookieCheckboxes[i].checked = true;
+      }
+    }
+  }
+};
+

@@ -1199,3 +1199,68 @@ body {
   .cta-banner { margin-block-start: -120px; }
 
 }
+/*AQUI AGREGO DISEÑO EL DIV COOKIES*/
+.cookie-section {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #e3e3e3;
+}
+
+.cookie-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #009688;
+  color: #fff;
+}
+
+#info-btn {
+  background-color: #e91e63;
+}
+
+#custom-btn {
+  background-color: #2196f3;
+}
+
+.customize-box {
+  display: none;
+  margin-top: 20px;
+}
+
+.customize-box h2 {
+  margin-bottom: 10px;
+}
+
+.customize-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.customize-box li {
+  margin-bottom: 10px;
+}
+
+.customize-box label {
+  margin-left: 5px;
+}
