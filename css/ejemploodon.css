@@ -1,0 +1,115 @@
+
+:root {
+	--border-width: 2px;
+  }
+  
+  #grid {
+	margin: 30px 0px 0px 0px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+  }
+  
+  .tooth {
+	position: relative;
+	width: 88.8888%;
+	height: 64%;
+	transform: rotate(-45deg);
+  }
+  
+  .tooth-part {
+	border: var(--border-width) solid #ddd;
+	background-color: white;
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	box-sizing: border-box;
+	border-width: 2px;
+  }
+  
+  /*.tooth-part.painted {
+	background-color: #ff0000;
+  }*/
+  
+  .tooth-wrapper {
+	width: 42px;
+	height: 59px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  .part-0 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+	width: 40%;
+	height: 40%;
+	border-radius: 100%;
+  }
+  .part-1 {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 3;
+	border-radius: 0 100% 0 0;
+	border-left-width: calc(var(--border-width) / 2);
+	border-bottom-width: calc(var(--border-width) / 2);
+  }
+  
+  .part-2 {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	z-index: 3;
+	border-radius: 0 0 100% 0;
+	border-left-width: calc(var(--border-width) / 2);
+	border-top-width: calc(var(--border-width) / 2);
+  }
+  
+  .part-3 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-radius: 0 0 0 100%;
+	border-right-width: calc(var(--border-width) / 2);
+	border-top-width: calc(var(--border-width) / 2);
+	z-index: 3;
+  }
+  
+  .part-4 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 100% 0 0 0;
+	border-right-width: calc(var(--border-width) / 2);
+	border-bottom-width: calc(var(--border-width) / 2);
+	z-index: 3;
+  }
+  /*segunda fila*/
+  #con1 {
+	margin: 0px 0px 30px -220px;
+    width: 400px;
+    height: 200px;
+    border: 2px solid black;
+  }  
+#con2 {
+	margin: 0px 0px 0px -220px;
+    width: 400px;
+    height: 500px;
+    border: 2px solid black;
+  }  
+#con3 {
+	margin: 0px 0px 0px -460px;
+    width: 800px;
+    height: 50px;
+    border: 2px solid black;
+  } 
+#con4 {
+	margin: 0px 0px 0px -460px;
+    width: 800px;
+    height: 680px;
+    border: 2px solid black;
+  }
