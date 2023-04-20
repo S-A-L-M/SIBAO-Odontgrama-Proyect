@@ -101,3 +101,57 @@ function sendEmail() {
     console.log(response);
   });
 }
+//APARTADO DE EL CONTAINER DE COOKIES
+const cookieContainer = document.querySelector(".cookie-section");
+const infoButton = document.querySelector("#info-btn");
+const acceptAllButton = document.querySelector("#accept-btn");
+const customizeButton = document.querySelector("#custom-btn");
+const cancelButton = document.querySelector("#cancel-btn");
+const cookieCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+
+function showCustomizeBox() {
+  cookieContainer.classList.add("customize-mode");
+}
+
+function hideCustomizeBox() {
+  cookieContainer.classList.remove("customize-mode");
+}
+
+function acceptAllCookies() {
+  for (let i = 0; i < cookieCheckboxes.length; i++) {
+    cookieCheckboxes[i].checked = true;
+  }
+  saveCookiePreferences();
+  hideCustomizeBox();
+}
+
+function saveCookiePreferences() {
+  const cookiePreferences = [];
+  for (let i = 0; i < cookieCheckboxes.length; i++) {
+    if (cookieCheckboxes[i].checked) {
+      cookiePreferences.push(cookieCheckboxes[i].value);
+    }
+  }
+  const cookiePreferencesString = JSON.stringify(cookiePreferences);
+  localStorage.setItem("cookiePreferences", cookiePreferencesString);
+}
+
+function loadCookiePreferences() {
+  const cookiePreferencesString = localStorage.getItem("cookiePreferences");
+  if (cookiePreferencesString) {
+    const cookiePreferences = JSON.parse(cookiePreferencesString);
+    for (let i = 0; i < cookieCheckboxes.length; i++) {
+      if (cookiePreferences.includes(cookieCheckboxes[i].value)) {
+        cookieCheckboxes[i].checked = true;
+      }
+    }
+  }
+}
+
+infoButton.addEventListener("click", showCustomizeBox);
+acceptAllButton.addEventListener("click", acceptAllCookies);
+customizeButton.addEventListener("click", showCustomizeBox);
+cancelButton.addEventListener("click", hideCustomizeBox);
+cookieContainer.addEventListener("change", saveCookiePreferences);
+
+loadCookiePreferences();
