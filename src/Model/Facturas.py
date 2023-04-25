@@ -9,7 +9,7 @@ class Facturas(db.Model):
     id_pago = db.Column(db.Integer, db.ForeignKey('tblpago.id'))
     id_paciente = db.Column(db.Integer)
     id_tratamiento = db.Column(db.Integer)
-    fecha = db.Column(db.DataTime)
+    fecha = db.Column(db.DateTime)
     total = db.Column(db.Double)
 
     def __init__(self, id_pago, id_paciente, id_tratamiento, fecha, total):

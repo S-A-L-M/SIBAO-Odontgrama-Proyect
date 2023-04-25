@@ -55,7 +55,64 @@ class Tooth {
   const tooth24 = new Tooth(24);
   const tooth25 = new Tooth(25);
   const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
+  const tooth26 = new Tooth(26);
 
+// Obtener todas las partes del diente
+const toothParts = document.querySelectorAll('.tooth-part');
+
+// Agregar un manejador de eventos "click" a cada parte del diente
+toothParts.forEach((part) => {
+  part.addEventListener('click', () => {
+    // Obtener el valor del color seleccionado
+    const selectedColor = document.querySelector('.selected-color');
+    const colorValue = selectedColor.getAttribute('value');
+
+    // Aplicar el color seleccionado a la parte del diente
+    part.style.backgroundColor = selectedColor.style.backgroundColor;
+    part.setAttribute('data', colorValue);
+  });
+});
+
+// Obtener todas las celdas de colores
+const colorCells = document.querySelectorAll('.color');
+
+// Agregar un manejador de eventos "click" a cada celda de color
+colorCells.forEach((cell) => {
+  cell.addEventListener('click', () => {
+    // Remover la clase "selected-color" de todas las celdas de color
+    colorCells.forEach((c) => {
+      c.classList.remove('selected-color');
+    });
+
+    // Agregar la clase "selected-color" a la celda de color seleccionada
+    cell.classList.add('selected-color');
+  });
+});
 
 /**
     <div class="tooth-wrapper" id="${tooth.id}">

@@ -3,6 +3,13 @@ from config.db import db, app, ma
 
 #Importar routes API
 from api.roles import routes_roles
+from api.Usuarios import routes_user
+from api.Tratamiento import routes_tratamientos
+from api.Citas import routes_citas
+from api.Pagos import routes_pagos
+from api.Facturas import routes_facturas
+from api.Historial import routes_hostorial
+from api.Odontograma import routes_odontograma
 
 
 #rutas | ¡¡¡RECUERDA PRIMERO IMPORTAR LA RUTA Y DESPUÉS AGREGARLO EN LA UBICACION DE RUTAS!!!! |

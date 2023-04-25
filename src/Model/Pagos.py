@@ -4,7 +4,6 @@ from config.db import db, app, ma
 class Pagos(db.Model):
     __tablename__ = "tblpago"
 
-
     id  = db.Column(db.Integer, primary_key=True)
     id_cita = db.Column(db.Integer, db.ForeignKey('tblcitas.id'))
     id_tratamiento = db.Column(db.Integer, db.ForeignKey('tbltratamientos.id'))
