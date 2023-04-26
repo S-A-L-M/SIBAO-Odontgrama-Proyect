@@ -47,6 +47,7 @@
 	width: 40%;
 	height: 40%;
 	border-radius: 100%;
+	border-color: black;
 }
 
 .part-1 {
@@ -57,6 +58,7 @@
 	border-radius: 0 100% 0 0;
 	border-left-width: calc(var(--border-width) / 2);
 	border-bottom-width: calc(var(--border-width) / 2);
+	border-color: black;
 }
 
 .part-2 {
@@ -67,6 +69,7 @@
 	border-radius: 0 0 100% 0;
 	border-left-width: calc(var(--border-width) / 2);
 	border-top-width: calc(var(--border-width) / 2);
+	border-color: black;
 }
 
 .part-3 {
@@ -77,6 +80,7 @@
 	border-right-width: calc(var(--border-width) / 2);
 	border-top-width: calc(var(--border-width) / 2);
 	z-index: 3;
+	border-color: black;
 }
 
 .part-4 {
@@ -87,45 +91,92 @@
 	border-right-width: calc(var(--border-width) / 2);
 	border-bottom-width: calc(var(--border-width) / 2);
 	z-index: 3;
+	border-color: black;
 }
 
 /*segunda fila*/
 #con1 {
-	margin: 0px 0px 30px -220px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
 	width: 400px;
 	height: 200px;
-	border: 2px solid black;
+	border: 1px solid black;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgb(145, 144, 144);
 }
 
 #con2 {
-	margin: 0px 0px 0px -220px;
+	position: absolute;
+	top: 250px;
+	left: 20px;
 	width: 400px;
-	height: 500px;
-	border: 2px solid black;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgb(145, 144, 144);
 }
 
 #con3 {
-	margin: 0px 0px 0px -460px;
+	position: absolute;
+	top: 20px;
+	left: 450px;
 	width: 800px;
 	height: 50px;
-	border: 2px solid black;
+	border: 1px solid black;
+	border-top-left-radius: var(--bs-border-radius);
+    border-top-right-radius: var(--bs-border-radius);
+	box-shadow: 5px 5px 10px rgb(145, 144, 144);
 }
 
 #con4 {
-	margin: 0px 0px 0px -460px;
+	position: absolute;
+	top: 70px;
+	left: 450px;
 	width: 800px;
-	height: 680px;
-	border: 2px solid black;
+	height: 480px;
+	border: 1px solid black;
+	border-radius: 10px;
+	border-top-left-radius: 0;
+    border-top-right-radius: 0;
+	box-shadow: 5px 5px 10px rgb(145, 144, 144);
 }
-
-/*colorear parte del diente*/
+#con5 {
+	position: absolute;
+	top: 570px;
+	left: 20px;
+	width: 400px;
+	height: 600px;
+	border: 1px solid rgb(114, 111, 111);
+	/*border-radius: 10px;*/
+	overflow: auto; width: 200px; height: 250px;
+	box-shadow: 5px 5px 10px rgb(145, 144, 144);
+}
 
 /* Estilos para la tabla de colores */
 .color {
 	cursor: pointer;
+	margin-top: -15px; margin-left: 1px;
+	width:65px; height:20px;
+	border-radius: 10px;
+	border: 1px solid black;
   }
-  
-  /* Estilos para el color seleccionado */
-  .color.selected {
-	border: 2px solid black;
+  .cuadrocolor {
+	border: 1px solid rgb(143, 140, 140); margin-top: 1px; width: 70px; height: 40px;
+	border-radius: 10px;
+  }
+  .numero {
+	margin: -65px -45px 0px 0px;
+	font-weight: bold;
+	font-size: 20px;
+	color: #504f4f;
+  }
+  .numeromedio {
+	margin: -65px -75px 0px 0px;
+	font-weight: bold;
+	font-size: 20px;
+	color: #504f4f;
+  }
+  #hola{
+border: 1px solid black;
   }
