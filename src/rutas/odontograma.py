@@ -5,4 +5,4 @@ routes_odontograma = Blueprint("routes_odontograma", __name__)
 @routes_odontograma.route('/indexodontograma', methods=['GET'])
 def indexodontograma():
 
-    return render_template('/main/odontograma.html')
+    return render_template('/main/ejemploodontograma.html')
