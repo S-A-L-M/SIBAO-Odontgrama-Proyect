@@ -78,3 +78,18 @@ colorCells.forEach((cell) => {
       </div>
     </div>
 */
+
+// Obtener todos los elementos con la clase "tooth"
+const teeth = document.querySelectorAll('.tooth');
+
+// Iterar sobre cada diente y agregar un evento de clic
+teeth.forEach(tooth => {
+  tooth.addEventListener('click', () => {
+    // Obtener el número de diente
+    const number = tooth.textContent;
+    // Mostrar un mensaje con el número de diente seleccionado
+    alert(`Has seleccionado el diente ${number}`);
+    // Cambiar el color del fondo del diente seleccionado
+    //tooth.style.backgroundColor = 'yellow';
+  });
+});

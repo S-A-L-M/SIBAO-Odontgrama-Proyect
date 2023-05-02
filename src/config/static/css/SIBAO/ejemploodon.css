@@ -3,8 +3,9 @@
 }
 
 #grid {
-	margin: 30px 0px 0px 0px;
+	margin: 5% 0;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
 }
@@ -24,10 +25,6 @@
 	box-sizing: border-box;
 	border-width: 2px;
 }
-
-/*.tooth-part.painted {
-	background-color: #ff0000;
-  }*/
 
 .tooth-wrapper {
 	width: 42px;
