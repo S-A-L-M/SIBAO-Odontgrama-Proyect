@@ -93,53 +93,54 @@
 
 /*segunda fila*/
 #con1 {
-	position: relative;
-	top: -20px;
-	left: -600px;
-	width: 400px;
-	height: 200px;
+	margin-top: -2%;
+	margin-left: 1%;
+	width: 20%;
+	height: 50%;
 	border-radius: 10px;
 	box-shadow: 4px 4px 8px rgb(219, 219, 219);
 }
 
 #con2 {
-	position: relative;
-	top: 0px;
-	left: -600px;
-	width: 400px;
-	height: 300px;
+	margin-top: 1%;
+	margin-left: 1%;
+	width: 20%;
 	border-radius: 10px;
 	box-shadow: 4px 4px 8px rgb(219, 219, 219);
+	padding-bottom: 20%; /* Proporción 16:9 para la altura */
 }
 
 #con3 {
-	position: relative;
-	top: -690px;
-	left: 10px;
-	width: 800px;
-	height: 50px;
+	margin-top: -44%;
+	margin-left: 22%;
+	width: 60%;
+	padding-bottom: 0%;
+	border-radius: 5px;
 	border-top-left-radius: var(--bs-border-radius);
     border-top-right-radius: var(--bs-border-radius);
 	box-shadow: 4px 4px 8px rgb(219, 219, 219);
 }
 
 #con4 {
-	position: relative;
-	top: -670px;
-	left: 10px;
-	width: 800px;
-	height: 450px;
+	margin-top: 1%;
+	margin-left: 22%;
+	width: 60%;
 	border-radius: 10px;
 	border-top-left-radius: 0;
     border-top-right-radius: 0;
 	box-shadow: 4px 4px 8px rgb(219, 219, 219);
 }
 #con5 {
-	position: relative;
-	top: 20px;
-	left: -700px;
+	margin-top: 2%;
+	margin-left: 1%;
 	border-radius: 5px;
-	overflow: auto; width: 200px; height: 150px;
+	overflow: auto; width: 10%; 
+	box-shadow: 4px 4px 8px rgb(219, 219, 219);
+}
+#con6 {
+	border: 1px solid black;
+	width: 40%;
+	height: 50px;
 	box-shadow: 4px 4px 8px rgb(219, 219, 219);
 }
 
@@ -171,8 +172,8 @@
 	position: relative;
 	top: 10px;
 	left: 100px;
-	width: 150px;
-	height: 150px;
+	width: 50%;
+	height: 50%;
   }
   ::-webkit-scrollbar {
 	width: 12px;

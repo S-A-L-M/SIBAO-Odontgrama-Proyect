@@ -86,7 +86,7 @@ const teeth = document.querySelectorAll('.tooth');
 teeth.forEach(tooth => {
   tooth.addEventListener('click', () => {
     // Obtener el número de diente
-    const number = tooth.textContent;
+    const number = tooth.getAttribute("value");
     // Mostrar un mensaje con el número de diente seleccionado
     alert(`Has seleccionado el diente ${number}`);
     // Cambiar el color del fondo del diente seleccionado
