@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modal de Bootstrap</title>
+  <!-- Incluir el archivo CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/ejemploodon.css">
+</head>
+<body>
+
+<!-- Botón para abrir el modal -->
+<button id="myBtn">Abrir Modal</button>
+
+<!-- El modal -->
+<div id="myModal" class="modal">
+
+  <!-- Contenido del modal -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Este es un ejemplo de modal con CSS.</p>
+  </div>
+
+</div>
+<script>
+    // Obtener el modal
+var modal = document.getElementById("myModal");
+
+// Obtener el botón que abre el modal
+var btn = document.getElementById("myBtn");
+
+// Obtener el botón de cerrar
+var span = document.getElementsByClassName("close")[0];
+
+// Cuando se hace clic en el botón, se abre el modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Cuando se hace clic en el botón de cerrar, se cierra el modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Cuando el usuario hace clic fuera del modal, se cierra el modal
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</body>
+</html>
