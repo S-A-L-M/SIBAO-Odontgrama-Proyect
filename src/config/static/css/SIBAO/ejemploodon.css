@@ -107,8 +107,10 @@
 	width: 20%;
 	border-radius: 10px;
 	box-shadow: 4px 4px 8px rgb(219, 219, 219);
-	padding-bottom: 15%; /* Proporción 16:9 para la altura */
+	padding-bottom: 15%;
+	/* Proporción 16:9 para la altura */
 }
+
 #con3 {
 	margin-top: 1%;
 	margin-left: 1%;
@@ -116,19 +118,20 @@
 	padding-bottom: 0%;
 	border-radius: 2;
 	border-top-left-radius: var(--bs-border-radius);
-    border-top-right-radius: var(--bs-border-radius);
+	border-top-right-radius: var(--bs-border-radius);
 	border: 1px solid rgba(230, 230, 230, 0.226);
 	box-shadow: 2px 2px 5px rgba(170, 170, 170, 0.3);
 }
+
 #con4 {
 	margin-top: 0%;
 	margin-left: 1%;
 	border-radius: 2px;
 	width: 15%;
 	height: 120px;
-	overflow: auto; 
+	overflow: auto;
 	border-top-left-radius: 0;
-    border-top-right-radius: 0;
+	border-top-right-radius: 0;
 	border: 1px solid rgba(230, 230, 230, 0.226);
 	box-shadow: 2px 2px 5px rgba(170, 170, 170, 0.3);
 }
@@ -140,12 +143,14 @@
 	border-radius: 10px;
 	box-shadow: 4px 4px 8px rgb(219, 219, 219);
 }
-#con6{
+
+#con6 {
 	margin-top: 0.5%;
 	width: 40%;
 	height: 62px;
 	box-shadow: 2px 2px 5px rgba(170, 170, 170, 0.3);
 }
+
 #con7 {
 	margin-top: 0%;
 	width: 40%;
@@ -156,84 +161,123 @@
 /* Estilos para la tabla de colores */
 .color {
 	cursor: pointer;
-	margin-top: -8%; 
+	margin-top: -8%;
 	margin-left: 25%;
-	width:50%; height:50%;
+	width: 50%;
+	height: 50%;
 	border-radius: 5px;
 	border: 1px solid rgb(184, 179, 179);
-  }
-  .cuadrocolor {
+}
+
+.cuadrocolor {
 	margin-top: auto;
 	width: 50%;
 	height: 50px;
 	border-radius: 10px;
 	box-shadow: 4px 4px 4px rgb(219, 219, 219);
-  }
-  .numero {
+}
+
+.numero {
 	margin: -7% -6% 0% 0%;
 	font-weight: bold;
 	font-size: 20px;
 	color: #504f4f;
-  }
-  .numeromedio {
+}
+
+.numeromedio {
 	margin: -7% -10% 0% 0%;
 	font-weight: bold;
 	font-size: 20px;
 	color: #504f4f;
-  }
-  #img{
+}
+
+#img {
 	margin-top: auto;
 	margin-left: 20%;
 	width: 50%;
 	height: 50%;
-  }
-  ::-webkit-scrollbar {
+}
+
+::-webkit-scrollbar {
 	width: 12px;
-  }
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
 	background-color: rgb(63, 169, 255);
 	border-radius: 4px;
-  }
-  .info {
+}
+
+.info {
 	margin-top: 3%;
 	margin-left: -10%;
 	font-weight: bold;
 	width: auto;
-  }
+}
 
-    /* Estilo para el modal */
-	.modal {
-		display: none; /* Ocultar el modal de forma predeterminada */
-		position: fixed; /* Posición fija para que aparezca en el centro de la pantalla */
-		z-index: 1; /* Colocar el modal por encima de todo el contenido */
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		overflow: auto; /* Agregar desplazamiento si el contenido del modal es demasiado grande */
-		background-color: rgba(0,0,0,0.4); /* Fondo oscuro semi-transparente */
-	  }
-	  
-	  /* Estilo para el contenido del modal */
-	  .modal-content {
-		background-color: #fefefe;
-		margin: 15% auto; /* 15% de la parte superior y centrado horizontalmente */
-		padding: 20px;
-		border: 1px solid #888;
-		width: 80%; /* Ancho del contenido */
-	  }
-	  
-	  /* Estilo para el botón de cerrar */
-	  .close {
-		color: #aaaaaa;
-		float: right;
-		font-size: 28px;
-		font-weight: bold;
-	  }
-	  
-	  .close:hover,
-	  .close:focus {
-		color: #000;
-		text-decoration: none;
-		cursor: pointer;
-	  }
+/* Estilo para el modal */
+.modalod {
+	display: none;
+	/* Ocultar el modal de forma predeterminada */
+	position: fixed;
+	/* Posición fija para que aparezca en el centro de la pantalla */
+	z-index: 1;
+	/* Colocar el modal por encima de todo el contenido */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	/* Agregar desplazamiento si el contenido del modal es demasiado grande */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Fondo oscuro semi-transparente */
+}
+
+/* Estilo para el contenido del modal */
+.modalod-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	/* 15% de la parte superior y centrado horizontalmente */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 50%;
+	/* Ancho del contenido */
+	border-radius: 1.5%;
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#myBtn {
+	margin-top: -35%;
+	margin-left: 90%;
+}
+#btnfacturar {
+	width: auto;
+	height: auto;
+	margin-left: 62%; margin-top: -10%
+}
+#btnimprimir {
+	width: auto;
+	height: auto;
+	margin-left: 83%; margin-top: -17.1%;
+}
+#btnguardar {
+	width: auto;
+	height: auto;
+
+}
+* {
+	box-sizing: border-box;
+  }
