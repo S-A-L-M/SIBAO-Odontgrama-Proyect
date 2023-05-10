@@ -33,21 +33,20 @@
 
 
 
-// Obtener todas las partes del diente
-const toothParts = document.querySelectorAll('.tooth-part');
+// // Obtener todas las partes del diente
+// const toothParts = document.querySelectorAll('.tooth-part');
 
-// Agregar un manejador de eventos "click" a cada parte del diente
-toothParts.forEach((part) => {
-  part.addEventListener('click', () => {
-    // Obtener el valor del color seleccionado
-    const selectedColor = document.querySelector('.selected-color');
-    const colorValue = selectedColor.getAttribute('value');
-
-    // Aplicar el color seleccionado a la parte del diente
-    part.style.backgroundColor = selectedColor.style.backgroundColor;
-    part.setAttribute('data', colorValue);
-  });
-});
+// // Agregar un manejador de eventos "click" a cada parte del diente
+// toothParts.forEach((part) => {
+//   part.addEventListener('click', () => {
+//     // Obtener el valor del color seleccionado
+//     const selectedColor = document.querySelector('.selected-color');
+//     const colorValue = selectedColor.getAttribute('value');
+//     // Aplicar el color seleccionado a la parte del diente
+//     part.style.backgroundColor = selectedColor.style.backgroundColor;
+//     part.setAttribute('data', colorValue);
+//   });
+// });
 
 // Obtener todas las celdas de colores
 const colorCells = document.querySelectorAll('.color');
@@ -89,32 +88,42 @@ teeth.forEach(tooth => {
     const number = tooth.getAttribute("value");
     // Mostrar un mensaje con el número de diente seleccionado
     //alert(`Has seleccionado el diente ${number}`);
-    // Cambiar el color del fondo del diente seleccionado
-    //tooth.style.backgroundColor = 'yellow';
+    number.forEach(part => {
+      const selectedColor = document.querySelector('.selected-color');
+      const colorValue = selectedColor.getAttribute('value');
+      // Obtener todas las partes del diente seleccionado
+      const toothParts = tooth.querySelectorAll('.tooth-part');
+
+      // Aplicar el color seleccionado a todas las partes del diente seleccionado
+      toothParts.forEach((part) => {
+        part.style.backgroundColor = selectedColor.style.backgroundColor;
+        part.setAttribute('data', colorValue);
+      });
+    });
   });
 });
-    // Obtener el modal
-    var modal = document.getElementById("myModal");
+// Obtener el modal
+var modal = document.getElementById("myModal");
 
-    // Obtener el botón que abre el modal
-    var btn = document.getElementById("myBtn");
-    
-    // Obtener el botón de cerrar
-    var span = document.getElementsByClassName("close")[0];
-    
-    // Cuando se hace clic en el botón, se abre el modal
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    
-    // Cuando se hace clic en el botón de cerrar, se cierra el modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-    // Cuando el usuario hace clic fuera del modal, se cierra el modal
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+// Obtener el botón que abre el modal
+var btn = document.getElementById("myBtn");
+
+// Obtener el botón de cerrar
+var span = document.getElementsByClassName("close")[0];
+
+// Cuando se hace clic en el botón, se abre el modal
+btn.onclick = function () {
+  modal.style.display = "block";
+}
+
+// Cuando se hace clic en el botón de cerrar, se cierra el modal
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+// Cuando el usuario hace clic fuera del modal, se cierra el modal
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
