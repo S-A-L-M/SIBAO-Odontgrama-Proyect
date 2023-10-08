@@ -17,3 +17,4 @@ with app.app_context():
 class RolesSchema(ma.Schema):
     class Meta:
         fields = ('id','roles')
+        */hola/*
